@@ -1,4 +1,6 @@
-import cheerio from "cheerio";
+// import cheerio from "cheerio";
+import { load } from "cheerio";
+
 
 // Target markets
 const TARGET_MARKETS = [
@@ -51,7 +53,7 @@ const scrapeWinningNumbers = async () => {
     }
 
     const html = await response.text();
-    const $ = cheerio.load(html);
+    const $ = load(html);
     const results = [];
 
     const findMarket = (name) => TARGET_MARKETS.find(m => m.market_name.toLowerCase() === name.toLowerCase());
