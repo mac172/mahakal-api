@@ -1,0 +1,14 @@
+{
+  "name": "scraper-worker",
+  "main": "worker.js", // Entry file for Cloudflare Worker
+  "compatibility_date": "2024-02-12",
+  "type": "module",
+  "usage_model": "bundled",
+  "env": {
+    "production": {
+      "vars": {
+        "SCRAPE_URL": "https://dpbosssnet.services/"
+      }
+    }
+  }
+}
